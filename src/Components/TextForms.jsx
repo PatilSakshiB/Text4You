@@ -7,29 +7,34 @@ function TextForms(props) {
     }
     const handleSentenceCase = () => {
       setText(text.toLowerCase().replace(/(^\s*\w|[.!?]\s*\w)/g, c => c.toUpperCase()));
+      props.showAlert("Text converted to Sentence Case Successfully!","success");
     }
     const handleUpperCase = () => {
         setText(text.toUpperCase());
+        props.showAlert("Text converted to Upper Case Successfully!","success");
     }
      const handleLowerCase = () => {
         setText(text.toLowerCase());
+        props.showAlert("Text converted to Lower Case Successfully!","success");
     }
     const handleTitleCase = () => {
       setText(text.toLowerCase()
             .split(' ')
             .map(word => word.charAt(0).toUpperCase() + word.slice(1))
             .join(' '));
+      props.showAlert("Text converted to Title Case Successfully!","success");
     }
      const handleClear = () => {
         setText('');
+        props.showAlert("Text Cleared Successfully!","success");
     }
     const handleCopy = () => {
       navigator.clipboard.writeText(text)
-    .then(() => alert('Text copied to clipboard!'))
-    .catch(() => alert('Failed to copy text'));
+      props.showAlert("Text copied to clipboard!","success");
     }
     const handleRemoveSpaces = () => {
       setText( text.trim().split(/\s+/).join(" "));
+      props.showAlert("Removed Extra Spaces from Text Successfully!","success");
     }
   return (
     <>
