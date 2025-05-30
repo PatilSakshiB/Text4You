@@ -42,7 +42,7 @@ function App() {
        <Router>
         <Navbar title="Text4You" mode={mode} toggleMode={toggleMode}/>
       <Alert alert={alert}/>
-      <div className="container my-4">
+      <div className="container">
           <Routes>
             <Route
               path="/"

@@ -2,7 +2,7 @@ import React from 'react'
 
 function About(props) {
   return (
-    <div className="container my-5" style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>
+    <div className="container" style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>
       <h2>About Text4You</h2>
       <p className="mt-3">
         <strong>Text4You</strong> is a user-friendly text utility tool designed to help you efficiently manipulate and analyze your text. Whether you're a writer, student, developer, or content creator, this app offers powerful features to enhance your text productivity.
